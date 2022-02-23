@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
   'use stirct';
-  let tab = document.querySelectorAll('.info-header-tab'),
-    info = document.querySelector('.info-header'),
+  let tabHeader = document.querySelectorAll('.info-header-tab'),
+    tabHeaderParent = document.querySelector('.info-header'),
     tabContent = document.querySelectorAll('.info-tabcontent');
 
   function hideTabContent(a) {
@@ -20,11 +20,11 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  info.addEventListener('click', function (event) {
+  tabHeaderParent.addEventListener('click', function (event) {
     let target = event.target;
     if (target && target.classList.contains('info-header-tab')) {
-      for (let i = 0; i < tab.length; i++) {
-        if (target == tab[i]) {
+      for (let i = 0; i < tabHeader.length; i++) {
+        if (target == tabHeader[i]) {
           hideTabContent(0);
           showTabContent(i);
           break;
@@ -35,8 +35,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // Timer
 
-  let deadline = '2022-02-18';
-  
+  let deadline = '2022-03-18';
+
   function getTimeRemaining(endtime) {
     let t = Date.parse(endtime) - Date.parse(new Date()),
       seconds = Math.floor((t / 1000) % 60),
@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', function () {
     let timer = document.getElementById(id),
       hours = timer.querySelector('.hours'),
       minutes = timer.querySelector('.minutes'),
-      seconds = timer.querySelector('.seconds'), 
+      seconds = timer.querySelector('.seconds'),
       timeInterval = setInterval(updateClock, 1000);
 
     function updateClock() {
@@ -76,5 +76,31 @@ window.addEventListener('DOMContentLoaded', function () {
 
   setClock('timer', deadline);
 
+  //Modal window
+
+  let more = document.querySelector('.more'),
+    overlay = document.querySelector('.overlay'),
+    close = document.querySelector('.popup-close'),
+    descriptionBtn = document.querySelectorAll('.description-btn');
+
+  more.addEventListener('click', function () {
+    overlay.style.display = 'block';
+    this.classList.add('more-splash');
+    document.body.style.overflow = 'hidden';
+  });
+
+  close.addEventListener('click', function () {
+    overlay.style.display = 'none';
+    more.classList.remove('more-splash');
+    document.body.style.overflow = '';
+  });
+
+  descriptionBtn.forEach(function(item) {
+    item.addEventListener('click', function(){
+      overlay.style.display = 'block';
+      more.classList.add('more-splash');
+      document.body.style.overflow = 'hidden';
+    });
+  });
 });
 
