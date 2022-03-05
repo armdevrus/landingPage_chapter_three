@@ -1,0 +1,29 @@
+[33mcommit 7666ee6397a151e4619395233aff2441c2c6c49b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Arman <aisenovdev@gmail.com>
+Date:   Thu Mar 3 18:48:59 2022 +0500
+
+    works sending data of user from form
+
+[33mcommit 36e0c17f0f3b4ad14ae523b97a29946cb2bb62a0[m
+Author: Arman <aisenovdev@gmail.com>
+Date:   Sat Feb 26 17:03:45 2022 +0500
+
+    task of ES6 was done
+
+[33mcommit 6b64cc6bc43cf800fc55536590a6fabda054ba15[m
+Author: Arman <aisenovdev@gmail.com>
+Date:   Wed Feb 23 22:07:00 2022 +0500
+
+    modal windows works
+
+[33mcommit aa25b4c0944bf8450ddfb4e5e6e5641e9d1a322c[m
+Author: Arman <aisenovdev@gmail.com>
+Date:   Thu Feb 17 15:29:18 2022 +0500
+
+    timer has changed, it's dynamic
+
+[33mcommit 4b519113534322d1b468722726338d34a7f364e7[m
+Author: Arman <aisenovdev@gmail.com>
+Date:   Thu Feb 10 17:22:13 2022 +0500
+
+    Landing page. First task was done
